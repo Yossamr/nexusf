@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>بيتي الذكي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Rubik:wght@400;500;700&display=swap');
+      
+      body {
+        font-family: 'Cairo', sans-serif;
+        background-color: #000000;
+        overflow: hidden;
+        color: white;
+        -webkit-tap-highlight-color: transparent;
+        text-rendering: optimizeLegibility;
+      }
+
+      /* --- PREMIUM BACKGROUND --- */
+      .bg-premium-gradient {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: radial-gradient(circle at 50% 0%, #1a202c 0%, #000000 70%);
+        z-index: -1;
+      }
+      
+      .bg-noise {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: url('https://grainy-gradients.vercel.app/noise.svg');
+        opacity: 0.03; 
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* --- APPLE-STYLE GLASS --- */
+      .glass-panel {
+        background: rgba(30, 30, 35, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      /* --- CARD ANIMATIONS --- */
+      .device-card {
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+      
+      .device-card:active {
+        transform: scale(0.95);
+      }
+
+      /* Scrollbar hiding */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "mqtt": "https://esm.sh/mqtt@^5.15.0",
+    "@libsql/client": "https://esm.sh/@libsql/client@^0.14.0/web",
+    "@libsql/client/": "https://esm.sh/@libsql/client@^0.14.0/",
+    "@google/genai": "https://esm.sh/@google/genai@latest"
+  }
+}
+</script>
+</head>
+  <body>
+    <div class="bg-premium-gradient"></div>
+    <div class="bg-noise"></div>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

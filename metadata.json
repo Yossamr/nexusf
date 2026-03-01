@@ -1,0 +1,7 @@
+{
+  "name": "LAST NEXUS",
+  "description": "A high-fidelity simulation of a 2.8-inch TFT touch display running an LVGL-styled interface for IoT device control.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
